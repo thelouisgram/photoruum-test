@@ -8,12 +8,8 @@ export default function Home() {
   const [form, setForm] = useState(false);
   return (
     <div className="bg-white w-[100%] min-h-screen  relative">
-      {form && (
-        <>
-          <Screen setForm={setForm} />
-          <ContactForm setForm={setForm} />
-        </>
-      )}
+          {form && <Screen setForm={setForm} />}
+          <ContactForm setForm={setForm} form={form}/>
       <div className="w-full h-full py-30 md:py-32 px-[14px] md:px-0 flex justify-center items-center">
         <div className="w-full md:w-[512px] h-auto flex flex-col justify-center items-center space-y-6 md:space-y-8 ">
           <div className="aspect-[400.1/569.24] md:aspect-auto w-full md:h-[652px] rounded-[12px] overflow-hidden flex justify-center items-center">

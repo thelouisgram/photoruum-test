@@ -4,9 +4,10 @@ import { useState } from 'react'
 
 interface ContactFormProps {
   setForm: (value: boolean) => void;
+  form: boolean
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({setForm}) => {
+const ContactForm: React.FC<ContactFormProps> = ({setForm, form}) => {
     const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -31,7 +32,9 @@ const ContactForm: React.FC<ContactFormProps> = ({setForm}) => {
   }
 
   return (
-    <div className="w-full min-h-screen h-full md:w-[656px] fixed z-[10] bg-white right-0 overflow-y-scroll space-y-14 md:space-y-20">
+    <div
+      className={`w-full min-h-screen h-full md:w-[656px] ${!form ? '-right-[100%] md:-right-[656px]' : "right-0"} fixed z-[10] bg-white  overflow-y-scroll space-y-14 md:space-y-20 transition-all`}
+    >
       <div className="w-full flex justify-between items-center py-9 border-b-[1px] border-[#E0E0E0] px-[14px] md:px-8">
         <h2 className="text-[20px] md:text-[24px] text-[#26272D]">
           Contact Ntokozo Maseko
