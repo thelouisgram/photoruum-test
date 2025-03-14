@@ -33,7 +33,9 @@ const ContactForm: React.FC<ContactFormProps> = ({setForm, form}) => {
 
   return (
     <div
-      className={`w-full min-h-screen h-full md:w-[656px] ${!form ? '-right-[100%] md:-right-[656px]' : "right-0"} fixed z-[10] bg-white  overflow-y-scroll space-y-14 md:space-y-20 transition-all`}
+      className={`w-full min-h-screen h-full md:w-[656px] ${
+        !form ? "-right-[100%] md:-right-[656px]" : "right-0"
+      } fixed z-[10] bg-white  overflow-y-scroll space-y-14 md:space-y-20 transition-all`}
     >
       <div className="w-full flex justify-between items-center py-9 border-b-[1px] border-[#E0E0E0] px-[14px] md:px-8">
         <h2 className="text-[20px] md:text-[24px] text-[#26272D]">
@@ -48,7 +50,8 @@ const ContactForm: React.FC<ContactFormProps> = ({setForm, form}) => {
         </button>
       </div>
       <form onSubmit={handleSubmit} className="mb-20 px-[14px] md:px-9">
-        <div className="space-y-10 ">
+        <div className="space-y-10">
+          {/* Name & Surname */}
           <div className="h-[84px] flex flex-col justify-between">
             <label className="block text-[#26272D] text-[18px]">
               Name & Surname
@@ -57,7 +60,7 @@ const ContactForm: React.FC<ContactFormProps> = ({setForm, form}) => {
               type="text"
               name="name"
               placeholder="Your name here"
-              className="w-full text-[#A5A5A5] font-[300] h-24 focus:outline-none"
+              className="w-full text-[#26272D] font-[300] h-24 focus:outline-none placeholder:text-[#A5A5A5]"
               onChange={handleChange}
               required
             />
@@ -73,7 +76,7 @@ const ContactForm: React.FC<ContactFormProps> = ({setForm, form}) => {
               type="email"
               name="email"
               placeholder="Your email address here"
-              className="w-full text-[#A5A5A5] font-[300] h-24 focus:outline-none"
+              className="w-full text-[#26272D] font-[300] h-24 focus:outline-none placeholder:text-[#A5A5A5]"
               onChange={handleChange}
               required
             />
@@ -89,7 +92,7 @@ const ContactForm: React.FC<ContactFormProps> = ({setForm, form}) => {
               type="tel"
               name="phone"
               placeholder="Phone number here"
-              className="w-full text-[#A5A5A5] font-[300] h-24 focus:outline-none"
+              className="w-full text-[#26272D] font-[300] h-24 focus:outline-none placeholder:text-[#A5A5A5]"
               onChange={handleChange}
               required
             />
@@ -104,7 +107,7 @@ const ContactForm: React.FC<ContactFormProps> = ({setForm, form}) => {
             <textarea
               name="details"
               placeholder="e.g. Pre-wedding shoot, Birthday shoot, Single portrait"
-              className="w-full text-[#A5A5A5] font-[300] h-24 focus:outline-none resize-none"
+              className="w-full text-[#26272D] font-[300] h-24 focus:outline-none resize-none placeholder:text-[#A5A5A5]"
               rows={3}
               onChange={handleChange}
               required
@@ -115,7 +118,7 @@ const ContactForm: React.FC<ContactFormProps> = ({setForm, form}) => {
         <div className="w-full flex md:justify-center">
           <button
             type="submit"
-            className=" bg-[#26272D] w-[174px] py-4 text-white text-[16px] rounded-[100px] hover:bg-gray-800 transition mt-6 md:mt-20"
+            className="bg-[#26272D] w-[174px] py-4 text-white text-[16px] rounded-[100px] hover:bg-gray-800 transition mt-6 md:mt-20"
           >
             Submit Request
           </button>
