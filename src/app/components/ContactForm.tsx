@@ -1,21 +1,23 @@
-import Image from 'next/image';
-import React from 'react'
-import { useState } from 'react'
+import Image from "next/image";
+import React from "react";
+import { useState } from "react";
 
 interface ContactFormProps {
   setForm: (value: boolean) => void;
-  form: boolean
+  form: boolean;
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({setForm, form}) => {
-    const [formData, setFormData] = useState({
+const ContactForm: React.FC<ContactFormProps> = ({ setForm, form }) => {
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     details: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -29,7 +31,7 @@ const ContactForm: React.FC<ContactFormProps> = ({setForm, form}) => {
       phone: "",
       details: "",
     });
-  }
+  };
 
   return (
     <div
@@ -49,18 +51,18 @@ const ContactForm: React.FC<ContactFormProps> = ({setForm, form}) => {
           <Image src="/assets/exit.svg" alt="exit" width={16} height={16} />
         </button>
       </div>
-      <form onSubmit={handleSubmit} className="mb-20 px-[14px] md:px-9">
+      <form onSubmit={handleSubmit} className="mb-20 px-[14px] md:px-10">
         <div className="space-y-10">
           {/* Name & Surname */}
-          <div className="h-[84px] flex flex-col justify-between">
-            <label className="block text-[#26272D] text-[18px]">
+          <div className="flex flex-col ">
+            <label className="block text-[#26272D] text-[18px] mb-[6]">
               Name & Surname
             </label>
             <input
               type="text"
               name="name"
               placeholder="Your name here"
-              className="w-full text-[#26272D] font-[300] h-24 focus:outline-none placeholder:text-[#A5A5A5]"
+              className="w-full text-[#26272D] text-[18px] font-[300] h-[24px] mb-4 focus:outline-none placeholder:text-[#A5A5A5]"
               onChange={handleChange}
               required
             />
@@ -76,8 +78,7 @@ const ContactForm: React.FC<ContactFormProps> = ({setForm, form}) => {
               type="email"
               name="email"
               placeholder="Your email address here"
-              className="w-full text-[#26272D] font-[300] h-24 focus:outline-none placeholder:text-[#A5A5A5]"
-              onChange={handleChange}
+              className="w-full text-[#26272D] text-[18px] font-[300] h-[24px] mb-4 focus:outline-none placeholder:text-[#A5A5A5]"
               required
             />
             <div className="h-[0.75px] w-full bg-[#A5A5A5]" />
@@ -92,7 +93,7 @@ const ContactForm: React.FC<ContactFormProps> = ({setForm, form}) => {
               type="tel"
               name="phone"
               placeholder="Phone number here"
-              className="w-full text-[#26272D] font-[300] h-24 focus:outline-none placeholder:text-[#A5A5A5]"
+              className="w-full text-[#26272D] text-[18px] font-[300] h-[24px] mb-4 focus:outline-none placeholder:text-[#A5A5A5]"
               onChange={handleChange}
               required
             />
@@ -107,7 +108,7 @@ const ContactForm: React.FC<ContactFormProps> = ({setForm, form}) => {
             <textarea
               name="details"
               placeholder="e.g. Pre-wedding shoot, Birthday shoot, Single portrait"
-              className="w-full text-[#26272D] font-[300] h-24 focus:outline-none resize-none placeholder:text-[#A5A5A5]"
+              className="w-full text-[#26272D] text-[18px] font-[300] h-[24px] mb-4 focus:outline-none placeholder:text-[#A5A5A5]"
               rows={3}
               onChange={handleChange}
               required
@@ -126,6 +127,6 @@ const ContactForm: React.FC<ContactFormProps> = ({setForm, form}) => {
       </form>
     </div>
   );
-}
+};
 
-export default ContactForm
+export default ContactForm;
