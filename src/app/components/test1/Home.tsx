@@ -4,7 +4,7 @@ import { useState } from "react";
 import Screen from "./Screen";
 import ContactForm from "./ContactForm";
 
-export default function Test1() {
+export default function Home() {
   const [form, setForm] = useState(false);
   return (
     <div className="bg-white w-[100%] min-h-screen  relative">

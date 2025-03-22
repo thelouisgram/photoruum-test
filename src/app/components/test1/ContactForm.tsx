@@ -54,8 +54,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ setForm, form }) => {
       <form onSubmit={handleSubmit} className="mb-20 px-[14px] md:px-10">
         <div className="space-y-10">
           {/* Name & Surname */}
-          <div className="flex flex-col ">
-            <label className="block text-[#26272D] text-[18px] mb-[6]">
+          <div className="flex flex-col">
+            <label className="block text-[#26272D] text-[18px] mb-6">
               Name & Surname
             </label>
             <input
@@ -70,8 +70,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ setForm, form }) => {
           </div>
 
           {/* Email Address */}
-          <div className="h-[84px] flex flex-col justify-between">
-            <label className="block text-[#26272D] text-[18px]">
+          <div className="flex flex-col">
+            <label className="block text-[#26272D] text-[18px] mb-6">
               Your Email Address
             </label>
             <input
@@ -85,8 +85,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ setForm, form }) => {
           </div>
 
           {/* Phone Number */}
-          <div className="h-[84px] flex flex-col justify-between">
-            <label className="block text-[#26272D] text-[18px]">
+          <div className="flex flex-col">
+            <label className="block text-[#26272D] text-[18px] mb-6">
               Phone Number
             </label>
             <input
@@ -101,14 +101,14 @@ const ContactForm: React.FC<ContactFormProps> = ({ setForm, form }) => {
           </div>
 
           {/* Shoot Detail */}
-          <div className="h-[84px] flex flex-col justify-between">
-            <label className="block text-[#26272D] text-[18px]">
+          <div className="flex flex-col">
+            <label className="block text-[#26272D] text-[18px] mb-[24px]">
               Shoot Detail
             </label>
             <textarea
               name="details"
               placeholder="e.g. Pre-wedding shoot, Birthday shoot, Single portrait"
-              className="w-full text-[#26272D] text-[18px] font-[300] h-[24px] mb-4 focus:outline-none placeholder:text-[#A5A5A5]"
+              className="w-full text-[#26272D] h-[88px] text-[18px] font-[300] mb-4 focus:outline-none placeholder:text-[#A5A5A5] resize-none"
               rows={3}
               onChange={handleChange}
               required
