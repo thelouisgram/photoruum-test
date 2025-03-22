@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React from "react";
 import { Formik, Form, Field } from "formik";
@@ -25,11 +25,16 @@ const SignUp = () => {
     password: "",
   };
 
-  const handleSubmit = (values: { firstName: string; lastName: string; email: string; password: string }) => {
-    console.log('FormData', values);
+  const handleSubmit = (values: {
+    firstName: string;
+    lastName: string;
+    email: string;
+    password: string;
+  }) => {
+    console.log("FormData", values);
     router.push("/test2/dashboard");
     toast.success("Sign-up successful!");
-  }
+  };
 
   return (
     <div className="w-[100%] h-[100%] min-h-screen bg-[#fff] relative">
@@ -59,13 +64,26 @@ const SignUp = () => {
       </header>
       <div className="w-full relative h-[312px]">
         <Image
-          src="/assets/players.jpg"
-          width={320}
-          height={244}
+          src="/assets/players.png"
+          width={472}
+          height={320}
           alt="players"
+          priority
           className="w-full object-cover h-full"
         />
+        <div className="font-light text-[14px] leading-[14px] tracking-[-0.02em] absolute z-[11] left-[15px] bottom-[25px] flex gap-1">
+          Work by <span className=" font-[400]">Kenneth Gueke</span>
+          <Image
+            src="/assets/ghanaFlag.svg"
+            width={24}
+            height={16}
+            alt="Ghana Flag"
+          />
+        </div>
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/72"></div>
       </div>
+
       <div className="w-full py-12 px-[15px] flex flex-col gap-4 border-b-[.5px] border-[#A5A5A5]">
         <div className="flex flex-wrap gap-2 text-[#000000]">
           <h3 className="font-[500] text-[24px] leading-[24px] tracking-[-0.02em]">
