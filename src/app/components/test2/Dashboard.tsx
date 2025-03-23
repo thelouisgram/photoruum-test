@@ -206,9 +206,12 @@ const Dashboard = () => {
       </div>
 
       {/* Footer */}
-      <p className="text-center text-gray-500 dark:text-gray-400 mt-6 text-sm">
-        2024 © PHOTORUUM FACILITY
-      </p>
+      <div className="flex w-full justify-center items-center ">
+        <button onClick={toggleMode} type='button'>mode</button>
+        <p className="text-center text-gray-500 dark:text-gray-400 mt-6 text-sm">
+          2024 © PHOTORUUM FACILITY
+        </p>
+      </div>
     </div>
   );
 };
