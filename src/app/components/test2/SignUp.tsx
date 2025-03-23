@@ -4,7 +4,6 @@ import React from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { useRouter } from "next/navigation";
-import { toast } from "react-hot-toast";
 
 const SignUp = () => {
   const router = useRouter();
@@ -33,13 +32,12 @@ const SignUp = () => {
   }) => {
     console.log("FormData", values);
     router.push("/test2/dashboard");
-    toast.success("Sign-up successful!");
   };
 
   return (
     <div className="w-[100%] h-[100%] min-h-screen bg-[#fff] relative">
       <header className="h-[72px] px-4 w-full flex justify-between items-center">
-        <div className="flex gap gap-[7.79px]">
+        <div className="flex gap gap-[7.79px] items-center">
           <Image
             src="/assets/logoLight.svg"
             width={35.36527633666992}
@@ -74,10 +72,11 @@ const SignUp = () => {
         <div className="font-light text-[14px] leading-[14px] tracking-[-0.02em] absolute z-[11] left-[15px] bottom-[25px] flex gap-1">
           Work by <span className=" font-[400]">Kenneth Gueke</span>
           <Image
-            src="/assets/ghanaFlag.svg"
-            width={24}
-            height={16}
+            src="/assets/togoFlag.png"
+            width={1280}
+            height={792}
             alt="Ghana Flag"
+            className='w-6 h-4'
           />
         </div>
         {/* Gradient Overlay */}
@@ -118,7 +117,7 @@ const SignUp = () => {
                   name="firstName"
                   required
                   placeholder="Your name"
-                  className="w-full p-3 border border-[#A5A5A5] rounded-lg focus:ring-2 focus:ring-black focus:outline-none placeholder:text-[#A5A5A5] text-[#000000] font-light"
+                  className="w-full p-3 border border-[#A5A5A5] rounded-lg  placeholder:text-[#A5A5A5] text-[#000000] font-light"
                 />
               </div>
               {/* Last Name */}
@@ -131,7 +130,7 @@ const SignUp = () => {
                   name="lastName"
                   required
                   placeholder="Your last name"
-                  className="w-full p-3 border border-[#A5A5A5] rounded-lg focus:ring-2 focus:ring-black focus:outline-none placeholder:text-[#A5A5A5] text-[#000000] font-light"
+                  className="w-full p-3 border border-[#A5A5A5] rounded-lg  placeholder:text-[#A5A5A5] text-[#000000] font-light"
                 />
               </div>
               {/* Email */}
@@ -142,7 +141,7 @@ const SignUp = () => {
                   name="email"
                   required
                   placeholder="Your email address"
-                  className="w-full p-3 border border-[#A5A5A5] rounded-lg focus:ring-2 focus:ring-black focus:outline-none placeholder:text-[#A5A5A5] text-[#000000] font-light"
+                  className="w-full p-3 border border-[#A5A5A5] rounded-lg  placeholder:text-[#A5A5A5] text-[#000000] font-light"
                 />
               </div>
               {/* Password */}
@@ -155,7 +154,7 @@ const SignUp = () => {
                   name="password"
                   required
                   placeholder="Enter password"
-                  className="w-full p-3 border border-[#A5A5A5] rounded-lg focus:ring-2 focus:ring-black focus:outline-none placeholder:text-[#A5A5A5] text-[#000000] font-light"
+                  className="w-full p-3 border border-[#A5A5A5] rounded-lg  placeholder:text-[#A5A5A5] text-[#000000] font-light"
                 />
               </div>
               {/* Submit Button */}
